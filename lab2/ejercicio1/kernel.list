@@ -1,0 +1,148 @@
+
+kernel.elf:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000040080000 <_start>:
+    40080000:	58000101 	ldr	x1, 40080020 <infloop+0x8>
+    40080004:	f9400021 	ldr	x1, [x1]
+    40080008:	9100003f 	mov	sp, x1
+    4008000c:	aa1f03e0 	mov	x0, xzr
+    40080010:	aa1f03e4 	mov	x4, xzr
+    40080014:	580000a0 	ldr	x0, 40080028 <infloop+0x10>
+
+0000000040080018 <infloop>:
+    40080018:	14000000 	b	40080018 <infloop>
+    4008001c:	00000000 	udf	#0
+    40080020:	40081070 	.inst	0x40081070 ; undefined
+    40080024:	00000000 	udf	#0
+    40080028:	40081000 	.inst	0x40081000 ; undefined
+    4008002c:	00000000 	udf	#0
+
+Disassembly of section .maze:
+
+0000000040081000 <laberinto>:
+    40081000:	2d2d2d2b 	stp	s11, s11, [x9, #-152]
+    40081004:	2b2d2d2d 	adds	w13, w9, w13, uxth #3
+    40081008:	2d2d2d2d 	stp	s13, s11, [x9, #-152]
+    4008100c:	2b2d2d2d 	adds	w13, w9, w13, uxth #3
+    40081010:	207c587c 	.inst	0x207c587c ; undefined
+    40081014:	20202020 	.inst	0x20202020 ; undefined
+    40081018:	2020207c 	.inst	0x2020207c ; undefined
+    4008101c:	7c2d2020 	.inst	0x7c2d2020 ; undefined
+    40081020:	207c207c 	.inst	0x207c207c ; undefined
+    40081024:	202b2d2d 	.inst	0x202b2d2d ; undefined
+    40081028:	2d2b207c 	stp	s28, s8, [x3, #-168]
+    4008102c:	7c20202d 	.inst	0x7c20202d ; undefined
+    40081030:	207c207c 	.inst	0x207c207c ; undefined
+    40081034:	207c2020 	.inst	0x207c2020 ; undefined
+    40081038:	207c207c 	.inst	0x207c207c ; undefined
+    4008103c:	7c202020 	.inst	0x7c202020 ; undefined
+    40081040:	2d2b207c 	stp	s28, s8, [x3, #-168]
+    40081044:	207c202d 	.inst	0x207c202d ; undefined
+    40081048:	207c207c 	.inst	0x207c207c ; undefined
+    4008104c:	2b2d2d20 	adds	w0, w9, w13, uxth #3
+    40081050:	2020207c 	.inst	0x2020207c ; undefined
+    40081054:	207c2020 	.inst	0x207c2020 ; undefined
+    40081058:	207c2020 	.inst	0x207c2020 ; undefined
+    4008105c:	7c232020 	.inst	0x7c232020 ; undefined
+    40081060:	2d2d2d2b 	stp	s11, s11, [x9, #-152]
+    40081064:	2d2b2d2d 	stp	s13, s11, [x9, #-168]
+    40081068:	2d2b2d2d 	stp	s13, s11, [x9, #-168]
+    4008106c:	2b2d2d2d 	adds	w13, w9, w13, uxth #3
+
+Disassembly of section .data:
+
+0000000040081070 <_stack_ptr>:
+    40081070:	00400000 	.inst	0x00400000 ; undefined
+    40081074:	00000000 	udf	#0
+
+0000000040081078 <estado>:
+    40081078:	4745554a 	.inst	0x4745554a ; undefined
+    4008107c:	4e45204f 	luti4	v15.16b, {v2.16b}, v5[0]
+    40081080:	52554320 	.inst	0x52554320 ; undefined
+    40081084:	21214f53 	.inst	0x21214f53 ; undefined
+
+Disassembly of section .debug_line:
+
+0000000000000000 <.debug_line>:
+   0:	00000039 	udf	#57
+   4:	001a0002 	.inst	0x001a0002 ; undefined
+   8:	01040000 	.inst	0x01040000 ; undefined
+   c:	000a0efb 	.inst	0x000a0efb ; undefined
+  10:	01010101 	.inst	0x01010101 ; undefined
+  14:	01000000 	.inst	0x01000000 ; undefined
+  18:	69616d00 	ldpsw	x0, x27, [x8, #-248]
+  1c:	00732e6e 	.inst	0x00732e6e ; undefined
+  20:	00000000 	udf	#0
+  24:	00020900 	.inst	0x00020900 ; undefined
+  28:	00400800 	.inst	0x00400800 ; undefined
+  2c:	03000000 	.inst	0x03000000 ; undefined
+  30:	1e1e010f 	.inst	0x1e1e010f ; undefined
+  34:	241e1e1e 	cmphi	p14.b, p7/z, z16.b, z30.b
+  38:	01000602 	.inst	0x01000602 ; undefined
+  3c:	Address 0x3c is out of bounds.
+
+
+Disassembly of section .debug_info:
+
+0000000000000000 <.debug_info>:
+   0:	0000002a 	udf	#42
+   4:	00000002 	udf	#2
+   8:	01080000 	.inst	0x01080000 ; undefined
+   c:	00000000 	udf	#0
+  10:	40080000 	.inst	0x40080000 ; undefined
+  14:	00000000 	udf	#0
+  18:	40080030 	.inst	0x40080030 ; undefined
+	...
+  24:	00000007 	udf	#7
+  28:	00000043 	udf	#67
+  2c:	Address 0x2c is out of bounds.
+
+
+Disassembly of section .debug_abbrev:
+
+0000000000000000 <.debug_abbrev>:
+   0:	10001101 	adr	x1, 220 <_stack_end-0x3ffde0>
+   4:	12011106 	and	w6, w8, #0x8000000f
+   8:	1b0e0301 	madd	w1, w24, w14, w0
+   c:	130e250e 	sbfiz	w14, w8, #18, #10
+  10:	00000005 	udf	#5
+
+Disassembly of section .debug_aranges:
+
+0000000000000000 <.debug_aranges>:
+   0:	0000002c 	udf	#44
+   4:	00000002 	udf	#2
+   8:	00080000 	.inst	0x00080000 ; undefined
+   c:	00000000 	udf	#0
+  10:	40080000 	.inst	0x40080000 ; undefined
+  14:	00000000 	udf	#0
+  18:	00000030 	udf	#48
+	...
+
+Disassembly of section .debug_str:
+
+0000000000000000 <.debug_str>:
+   0:	6e69616d 	rsubhn2	v13.8h, v11.4s, v9.4s
+   4:	2f00732e 	.inst	0x2f00732e ; undefined
+   8:	656d6f68 	fnmls	z8.h, p3/m, z27.h, z13.h
+   c:	656c612f 	fnmls	z15.h, p0/m, z9.h, z12.h
+  10:	67736978 	.inst	0x67736978 ; undefined
+  14:	7a656d6f 	.inst	0x7a656d6f ; undefined
+  18:	43444f2f 	.inst	0x43444f2f ; undefined
+  1c:	62616c2f 	.inst	0x62616c2f ; undefined
+  20:	646f2d32 	.inst	0x646f2d32 ; undefined
+  24:	32303263 	orr	w3, w19, #0x1fff0000
+  28:	616c5f36 	.inst	0x616c5f36 ; undefined
+  2c:	675f3262 	.inst	0x675f3262 ; undefined
+  30:	6d2d3730 	stp	d16, d13, [x25, #-304]
+  34:	2f6e6961 	umlsl	v1.4s, v11.4h, v14.h[6]
+  38:	72656a65 	.inst	0x72656a65 ; undefined
+  3c:	69636963 	ldpsw	x3, x26, [x11, #-232]
+  40:	4700316f 	.inst	0x4700316f ; undefined
+  44:	4120554e 	.inst	0x4120554e ; undefined
+  48:	2e322053 	usubl	v19.8h, v2.8b, v18.8b
+  4c:	Address 0x4c is out of bounds.
+
